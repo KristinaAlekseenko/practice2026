@@ -33,3 +33,4 @@ public class StringExtensionsTests
         Assert.True(input.IsPalindrome());
     }
 }
+// Тесты проверяют все условия =)
