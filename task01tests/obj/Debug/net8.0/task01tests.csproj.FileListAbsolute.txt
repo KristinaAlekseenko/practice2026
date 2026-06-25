@@ -99,3 +99,4 @@
 /home/mattraxer/practice2026/task01tests/obj/Debug/net8.0/task01tests.pdb
 /home/mattraxer/practice2026/task01tests/obj/Debug/net8.0/task01tests.genruntimeconfig.cache
 /home/mattraxer/practice2026/task01tests/obj/Debug/net8.0/ref/task01tests.dll
+/home/mattraxer/practice2026/task01tests/obj/Debug/net8.0/task01tests.sourcelink.json
