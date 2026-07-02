@@ -1,0 +1,12 @@
+/home/mattraxer/practice2026/task08/CommandLib/bin/Debug/net8.0/CommandLib.deps.json
+/home/mattraxer/practice2026/task08/CommandLib/bin/Debug/net8.0/CommandLib.dll
+/home/mattraxer/practice2026/task08/CommandLib/bin/Debug/net8.0/CommandLib.pdb
+/home/mattraxer/practice2026/task08/CommandLib/obj/Debug/net8.0/CommandLib.GeneratedMSBuildEditorConfig.editorconfig
+/home/mattraxer/practice2026/task08/CommandLib/obj/Debug/net8.0/CommandLib.AssemblyInfoInputs.cache
+/home/mattraxer/practice2026/task08/CommandLib/obj/Debug/net8.0/CommandLib.AssemblyInfo.cs
+/home/mattraxer/practice2026/task08/CommandLib/obj/Debug/net8.0/CommandLib.csproj.CoreCompileInputs.cache
+/home/mattraxer/practice2026/task08/CommandLib/obj/Debug/net8.0/CommandLib.sourcelink.json
+/home/mattraxer/practice2026/task08/CommandLib/obj/Debug/net8.0/CommandLib.dll
+/home/mattraxer/practice2026/task08/CommandLib/obj/Debug/net8.0/refint/CommandLib.dll
+/home/mattraxer/practice2026/task08/CommandLib/obj/Debug/net8.0/CommandLib.pdb
+/home/mattraxer/practice2026/task08/CommandLib/obj/Debug/net8.0/ref/CommandLib.dll

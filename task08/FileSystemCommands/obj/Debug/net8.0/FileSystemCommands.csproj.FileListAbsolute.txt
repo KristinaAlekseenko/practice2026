@@ -1,0 +1,16 @@
+/home/mattraxer/practice2026/task08/FileSystemCommands/bin/Debug/net8.0/FileSystemCommands.deps.json
+/home/mattraxer/practice2026/task08/FileSystemCommands/bin/Debug/net8.0/FileSystemCommands.dll
+/home/mattraxer/practice2026/task08/FileSystemCommands/bin/Debug/net8.0/FileSystemCommands.pdb
+/home/mattraxer/practice2026/task08/FileSystemCommands/bin/Debug/net8.0/CommandLib.dll
+/home/mattraxer/practice2026/task08/FileSystemCommands/bin/Debug/net8.0/CommandLib.pdb
+/home/mattraxer/practice2026/task08/FileSystemCommands/obj/Debug/net8.0/FileSystemCommands.csproj.AssemblyReference.cache
+/home/mattraxer/practice2026/task08/FileSystemCommands/obj/Debug/net8.0/FileSystemCommands.GeneratedMSBuildEditorConfig.editorconfig
+/home/mattraxer/practice2026/task08/FileSystemCommands/obj/Debug/net8.0/FileSystemCommands.AssemblyInfoInputs.cache
+/home/mattraxer/practice2026/task08/FileSystemCommands/obj/Debug/net8.0/FileSystemCommands.AssemblyInfo.cs
+/home/mattraxer/practice2026/task08/FileSystemCommands/obj/Debug/net8.0/FileSystemCommands.csproj.CoreCompileInputs.cache
+/home/mattraxer/practice2026/task08/FileSystemCommands/obj/Debug/net8.0/FileSystemCommands.sourcelink.json
+/home/mattraxer/practice2026/task08/FileSystemCommands/obj/Debug/net8.0/FileSystemCommands.csproj.CopyComplete
+/home/mattraxer/practice2026/task08/FileSystemCommands/obj/Debug/net8.0/FileSystemCommands.dll
+/home/mattraxer/practice2026/task08/FileSystemCommands/obj/Debug/net8.0/refint/FileSystemCommands.dll
+/home/mattraxer/practice2026/task08/FileSystemCommands/obj/Debug/net8.0/FileSystemCommands.pdb
+/home/mattraxer/practice2026/task08/FileSystemCommands/obj/Debug/net8.0/ref/FileSystemCommands.dll
