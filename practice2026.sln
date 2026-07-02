@@ -1,5 +1,4 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -36,6 +35,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandRunner", "task08\CommandRunner\CommandRunner.csproj", "{676F4086-014E-488F-AF33-F61D43C2FFBA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task08tests", "task08\task08tests\task08tests.csproj", "{0F11512E-4BEE-41F1-8F36-98A3316CE25B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task09", "task09\task09.csproj", "{88CE562D-3244-4696-9CA2-493F46C1FBC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +111,10 @@ Global
 		{0F11512E-4BEE-41F1-8F36-98A3316CE25B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F11512E-4BEE-41F1-8F36-98A3316CE25B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F11512E-4BEE-41F1-8F36-98A3316CE25B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CE562D-3244-4696-9CA2-493F46C1FBC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CE562D-3244-4696-9CA2-493F46C1FBC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CE562D-3244-4696-9CA2-493F46C1FBC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CE562D-3244-4696-9CA2-493F46C1FBC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1AAA1706-5B88-4F1C-B6C8-F4D814BA0C77} = {0BC8AB1F-D1B6-42E2-8F9E-A7CFA0DF4BFD}
