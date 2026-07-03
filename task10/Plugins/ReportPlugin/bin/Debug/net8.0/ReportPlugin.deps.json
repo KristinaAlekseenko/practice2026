@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ReportPlugin/1.0.0": {
+        "dependencies": {
+          "DatabasePlugin": "1.0.0",
+          "PluginLib": "1.0.0"
+        },
+        "runtime": {
+          "ReportPlugin.dll": {}
+        }
+      },
+      "DatabasePlugin/1.0.0": {
+        "dependencies": {
+          "LoggerPlugin": "1.0.0",
+          "PluginLib": "1.0.0"
+        },
+        "runtime": {
+          "DatabasePlugin.dll": {}
+        }
+      },
+      "LoggerPlugin/1.0.0": {
+        "dependencies": {
+          "PluginLib": "1.0.0"
+        },
+        "runtime": {
+          "LoggerPlugin.dll": {}
+        }
+      },
+      "PluginLib/1.0.0": {
+        "runtime": {
+          "PluginLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ReportPlugin/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DatabasePlugin/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LoggerPlugin/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PluginLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

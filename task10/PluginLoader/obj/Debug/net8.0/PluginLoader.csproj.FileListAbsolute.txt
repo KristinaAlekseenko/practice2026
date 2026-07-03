@@ -1,0 +1,16 @@
+/home/mattraxer/practice2026/task10/PluginLoader/bin/Debug/net8.0/PluginLoader.deps.json
+/home/mattraxer/practice2026/task10/PluginLoader/bin/Debug/net8.0/PluginLoader.dll
+/home/mattraxer/practice2026/task10/PluginLoader/bin/Debug/net8.0/PluginLoader.pdb
+/home/mattraxer/practice2026/task10/PluginLoader/bin/Debug/net8.0/PluginLib.dll
+/home/mattraxer/practice2026/task10/PluginLoader/bin/Debug/net8.0/PluginLib.pdb
+/home/mattraxer/practice2026/task10/PluginLoader/obj/Debug/net8.0/PluginLoader.csproj.AssemblyReference.cache
+/home/mattraxer/practice2026/task10/PluginLoader/obj/Debug/net8.0/PluginLoader.GeneratedMSBuildEditorConfig.editorconfig
+/home/mattraxer/practice2026/task10/PluginLoader/obj/Debug/net8.0/PluginLoader.AssemblyInfoInputs.cache
+/home/mattraxer/practice2026/task10/PluginLoader/obj/Debug/net8.0/PluginLoader.AssemblyInfo.cs
+/home/mattraxer/practice2026/task10/PluginLoader/obj/Debug/net8.0/PluginLoader.csproj.CoreCompileInputs.cache
+/home/mattraxer/practice2026/task10/PluginLoader/obj/Debug/net8.0/PluginLoader.sourcelink.json
+/home/mattraxer/practice2026/task10/PluginLoader/obj/Debug/net8.0/PluginLoader.csproj.CopyComplete
+/home/mattraxer/practice2026/task10/PluginLoader/obj/Debug/net8.0/PluginLoader.dll
+/home/mattraxer/practice2026/task10/PluginLoader/obj/Debug/net8.0/refint/PluginLoader.dll
+/home/mattraxer/practice2026/task10/PluginLoader/obj/Debug/net8.0/PluginLoader.pdb
+/home/mattraxer/practice2026/task10/PluginLoader/obj/Debug/net8.0/ref/PluginLoader.dll

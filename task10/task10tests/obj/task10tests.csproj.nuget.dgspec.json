@@ -1,0 +1,383 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/mattraxer/practice2026/task10/task10tests/task10tests.csproj": {}
+  },
+  "projects": {
+    "/home/mattraxer/practice2026/task10/PluginLib/PluginLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mattraxer/practice2026/task10/PluginLib/PluginLib.csproj",
+        "projectName": "PluginLib",
+        "projectPath": "/home/mattraxer/practice2026/task10/PluginLib/PluginLib.csproj",
+        "packagesPath": "/home/mattraxer/.nuget/packages/",
+        "outputPath": "/home/mattraxer/practice2026/task10/PluginLib/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mattraxer/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mattraxer/practice2026/task10/PluginLoader/PluginLoader.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mattraxer/practice2026/task10/PluginLoader/PluginLoader.csproj",
+        "projectName": "PluginLoader",
+        "projectPath": "/home/mattraxer/practice2026/task10/PluginLoader/PluginLoader.csproj",
+        "packagesPath": "/home/mattraxer/.nuget/packages/",
+        "outputPath": "/home/mattraxer/practice2026/task10/PluginLoader/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mattraxer/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/mattraxer/practice2026/task10/PluginLib/PluginLib.csproj": {
+                "projectPath": "/home/mattraxer/practice2026/task10/PluginLib/PluginLib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mattraxer/practice2026/task10/Plugins/DatabasePlugin/DatabasePlugin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mattraxer/practice2026/task10/Plugins/DatabasePlugin/DatabasePlugin.csproj",
+        "projectName": "DatabasePlugin",
+        "projectPath": "/home/mattraxer/practice2026/task10/Plugins/DatabasePlugin/DatabasePlugin.csproj",
+        "packagesPath": "/home/mattraxer/.nuget/packages/",
+        "outputPath": "/home/mattraxer/practice2026/task10/Plugins/DatabasePlugin/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mattraxer/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/mattraxer/practice2026/task10/PluginLib/PluginLib.csproj": {
+                "projectPath": "/home/mattraxer/practice2026/task10/PluginLib/PluginLib.csproj"
+              },
+              "/home/mattraxer/practice2026/task10/Plugins/LoggerPlugin/LoggerPlugin.csproj": {
+                "projectPath": "/home/mattraxer/practice2026/task10/Plugins/LoggerPlugin/LoggerPlugin.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mattraxer/practice2026/task10/Plugins/LoggerPlugin/LoggerPlugin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mattraxer/practice2026/task10/Plugins/LoggerPlugin/LoggerPlugin.csproj",
+        "projectName": "LoggerPlugin",
+        "projectPath": "/home/mattraxer/practice2026/task10/Plugins/LoggerPlugin/LoggerPlugin.csproj",
+        "packagesPath": "/home/mattraxer/.nuget/packages/",
+        "outputPath": "/home/mattraxer/practice2026/task10/Plugins/LoggerPlugin/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mattraxer/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/mattraxer/practice2026/task10/PluginLib/PluginLib.csproj": {
+                "projectPath": "/home/mattraxer/practice2026/task10/PluginLib/PluginLib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mattraxer/practice2026/task10/Plugins/ReportPlugin/ReportPlugin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mattraxer/practice2026/task10/Plugins/ReportPlugin/ReportPlugin.csproj",
+        "projectName": "ReportPlugin",
+        "projectPath": "/home/mattraxer/practice2026/task10/Plugins/ReportPlugin/ReportPlugin.csproj",
+        "packagesPath": "/home/mattraxer/.nuget/packages/",
+        "outputPath": "/home/mattraxer/practice2026/task10/Plugins/ReportPlugin/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mattraxer/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/mattraxer/practice2026/task10/PluginLib/PluginLib.csproj": {
+                "projectPath": "/home/mattraxer/practice2026/task10/PluginLib/PluginLib.csproj"
+              },
+              "/home/mattraxer/practice2026/task10/Plugins/DatabasePlugin/DatabasePlugin.csproj": {
+                "projectPath": "/home/mattraxer/practice2026/task10/Plugins/DatabasePlugin/DatabasePlugin.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mattraxer/practice2026/task10/task10tests/task10tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mattraxer/practice2026/task10/task10tests/task10tests.csproj",
+        "projectName": "task10tests",
+        "projectPath": "/home/mattraxer/practice2026/task10/task10tests/task10tests.csproj",
+        "packagesPath": "/home/mattraxer/.nuget/packages/",
+        "outputPath": "/home/mattraxer/practice2026/task10/task10tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mattraxer/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/mattraxer/practice2026/task10/PluginLoader/PluginLoader.csproj": {
+                "projectPath": "/home/mattraxer/practice2026/task10/PluginLoader/PluginLoader.csproj"
+              },
+              "/home/mattraxer/practice2026/task10/Plugins/DatabasePlugin/DatabasePlugin.csproj": {
+                "projectPath": "/home/mattraxer/practice2026/task10/Plugins/DatabasePlugin/DatabasePlugin.csproj"
+              },
+              "/home/mattraxer/practice2026/task10/Plugins/LoggerPlugin/LoggerPlugin.csproj": {
+                "projectPath": "/home/mattraxer/practice2026/task10/Plugins/LoggerPlugin/LoggerPlugin.csproj"
+              },
+              "/home/mattraxer/practice2026/task10/Plugins/ReportPlugin/ReportPlugin.csproj": {
+                "projectPath": "/home/mattraxer/practice2026/task10/Plugins/ReportPlugin/ReportPlugin.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.6.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.128/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
