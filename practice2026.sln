@@ -56,6 +56,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabasePlugin", "task10\Pl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportPlugin", "task10\Plugins\ReportPlugin\ReportPlugin.csproj", "{E105125B-B508-41CD-B90B-F6306C498FA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task11", "task11\task11.csproj", "{C5D147CD-AFD3-4257-B203-DDECDDFB66B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task11tests", "task11tests\task11tests.csproj", "{05B90888-7631-4D95-AA14-30B4CDAA3BB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,6 +165,14 @@ Global
 		{E105125B-B508-41CD-B90B-F6306C498FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E105125B-B508-41CD-B90B-F6306C498FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E105125B-B508-41CD-B90B-F6306C498FA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5D147CD-AFD3-4257-B203-DDECDDFB66B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5D147CD-AFD3-4257-B203-DDECDDFB66B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5D147CD-AFD3-4257-B203-DDECDDFB66B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5D147CD-AFD3-4257-B203-DDECDDFB66B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B90888-7631-4D95-AA14-30B4CDAA3BB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B90888-7631-4D95-AA14-30B4CDAA3BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B90888-7631-4D95-AA14-30B4CDAA3BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B90888-7631-4D95-AA14-30B4CDAA3BB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1AAA1706-5B88-4F1C-B6C8-F4D814BA0C77} = {0BC8AB1F-D1B6-42E2-8F9E-A7CFA0DF4BFD}
