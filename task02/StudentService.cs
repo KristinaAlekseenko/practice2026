@@ -35,7 +35,7 @@ public class StudentService
 
     public string GetFacultyWithHighestAverageGrade()
     {
-        return _students
+        var result = _students
             .GroupBy(s => s.Faculty)
             .Select(g => new
             {
@@ -43,7 +43,8 @@ public class StudentService
                 AverageGrade = g.Average(s => s.Grades.Average())
             })
             .OrderByDescending(x => x.AverageGrade)
-            .First()
-            .Faculty;
+            .FirstOrDefault();
+
+        return result?.Faculty ?? string.Empty;
     }
 }

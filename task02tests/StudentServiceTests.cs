@@ -32,11 +32,25 @@ public class StudentServiceTests
     }
 
     [Test]
+    public void GetStudentsByFaculty_EmptyFaculty_ReturnsEmpty()
+    {
+        var result = _service.GetStudentsByFaculty("Нет такого").ToList();
+        Assert.AreEqual(0, result.Count);
+    }
+
+    [Test]
     public void GetStudentsWithMinAverageGrade_ReturnsCorrectStudents()
     {
         var result = _service.GetStudentsWithMinAverageGrade(4).ToList();
         Assert.AreEqual(2, result.Count);
         Assert.IsTrue(result.All(s => s.Grades.Average() >= 4));
+    }
+
+    [Test]
+    public void GetStudentsWithMinAverageGrade_NoStudents_ReturnsEmpty()
+    {
+        var result = _service.GetStudentsWithMinAverageGrade(10).ToList();
+        Assert.AreEqual(0, result.Count);
     }
 
     [Test]
@@ -62,5 +76,13 @@ public class StudentServiceTests
     {
         var result = _service.GetFacultyWithHighestAverageGrade();
         Assert.AreEqual("Экономика", result);
+    }
+
+    [Test]
+    public void GetFacultyWithHighestAverageGrade_EmptyList_ReturnsEmptyString()
+    {
+        var emptyService = new StudentService(new List<Student>());
+        var result = emptyService.GetFacultyWithHighestAverageGrade();
+        Assert.AreEqual(string.Empty, result);
     }
 }
