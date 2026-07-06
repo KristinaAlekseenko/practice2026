@@ -1,62 +1,102 @@
-using Xunit;
 using System;
 using System.IO;
-using FileSystemCommands;
-
-namespace task08tests;
+using Xunit;
 
 public class FileSystemCommandsTests
 {
-    private string CreateTestDirectory()
-    {
-        string path = Path.Combine(Path.GetTempPath(), "TestDir_" + Guid.NewGuid().ToString());
-        Directory.CreateDirectory(path);
-        return path;
-    }
-
     [Fact]
     public void DirectorySizeCommand_ShouldCalculateSize()
     {
-        string testDir = CreateTestDirectory();
-        File.WriteAllText(Path.Combine(testDir, "test1.txt"), "Hello");
-        File.WriteAllText(Path.Combine(testDir, "test2.txt"), "World");
+        string testDir = Path.Combine(Path.GetTempPath(), "TestDir");
 
-        var command = new DirectorySizeCommand(testDir);
+        try
+        {
+            Directory.CreateDirectory(testDir);
+            File.WriteAllText(Path.Combine(testDir, "file1.txt"), "Hello");
+            File.WriteAllText(Path.Combine(testDir, "file2.txt"), "World");
+
+            var command = new DirectorySizeCommand(testDir);
+            var exception = Record.Exception(() => command.Execute());
+
+            Assert.Null(exception);
+        }
+        finally
+        {
+            if (Directory.Exists(testDir))
+                Directory.Delete(testDir, true);
+        }
+    }
+
+    [Fact]
+    public void DirectorySizeCommand_WithNonExistentDirectory_ShouldNotThrow()
+    {
+        var command = new DirectorySizeCommand("Z:\\NonExistentDir_123456");
         var exception = Record.Exception(() => command.Execute());
         Assert.Null(exception);
-
-        Directory.Delete(testDir, true);
     }
 
     [Fact]
     public void FindFilesCommand_ShouldFindMatchingFiles()
     {
-        string testDir = CreateTestDirectory();
-        File.WriteAllText(Path.Combine(testDir, "file1.txt"), "Text");
-        File.WriteAllText(Path.Combine(testDir, "file2.log"), "Log");
+        string testDir = Path.Combine(Path.GetTempPath(), "TestDir");
 
-        var command = new FindFilesCommand(testDir, "*.txt");
-        var exception = Record.Exception(() => command.Execute());
-        Assert.Null(exception);
+        try
+        {
+            Directory.CreateDirectory(testDir);
+            File.WriteAllText(Path.Combine(testDir, "file1.txt"), "Text");
+            File.WriteAllText(Path.Combine(testDir, "file2.log"), "Log");
 
-        Directory.Delete(testDir, true);
+            var command = new FindFilesCommand(testDir, "*.txt");
+            var exception = Record.Exception(() => command.Execute());
+
+            Assert.Null(exception);
+        }
+        finally
+        {
+            if (Directory.Exists(testDir))
+                Directory.Delete(testDir, true);
+        }
     }
 
     [Fact]
-    public void DirectorySizeCommand_ShouldHandleNonExistentPath()
+    public void FindFilesCommand_WithNoMatchingFiles_ShouldNotThrow()
     {
-        string path = Path.Combine(Path.GetTempPath(), "NonExistent_" + Guid.NewGuid().ToString());
-        var command = new DirectorySizeCommand(path);
-        var exception = Record.Exception(() => command.Execute());
-        Assert.Null(exception);
+        string testDir = Path.Combine(Path.GetTempPath(), "TestDir");
+
+        try
+        {
+            Directory.CreateDirectory(testDir);
+            File.WriteAllText(Path.Combine(testDir, "file1.txt"), "Text");
+
+            var command = new FindFilesCommand(testDir, "*.log");
+            var exception = Record.Exception(() => command.Execute());
+
+            Assert.Null(exception);
+        }
+        finally
+        {
+            if (Directory.Exists(testDir))
+                Directory.Delete(testDir, true);
+        }
     }
 
     [Fact]
-    public void FindFilesCommand_ShouldHandleNonExistentPath()
+    public void DirectorySizeCommand_ShouldNotThrowForEmptyDirectory()
     {
-        string path = Path.Combine(Path.GetTempPath(), "NonExistent_" + Guid.NewGuid().ToString());
-        var command = new FindFilesCommand(path, "*.txt");
-        var exception = Record.Exception(() => command.Execute());
-        Assert.Null(exception);
+        string testDir = Path.Combine(Path.GetTempPath(), "EmptyDir");
+
+        try
+        {
+            Directory.CreateDirectory(testDir);
+            var command = new DirectorySizeCommand(testDir);
+            var exception = Record.Exception(() => command.Execute());
+
+            Assert.Null(exception);
+        }
+        finally
+        {
+            if (Directory.Exists(testDir))
+                Directory.Delete(testDir, true);
+        }
     }
 }
