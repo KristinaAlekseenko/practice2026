@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Metadata/Metadata.csproj" Id="f2b112d4-afe4-4bcd-8b75-27c1fa308d72" />
   <Project Path="task07/task07.csproj" Id="f1fac317-4bf8-43c9-ba67-d0c018800a4f" />
   <Project Path="task07tests/task07tests.csproj" Id="30bbbff0-17b0-42f2-b711-d79ef7871c2e" />
 </Solution>
