@@ -29,6 +29,7 @@ namespace task02
 
         public string GetFacultyWithHighestAverageGrade()
 
-        => _students.GroupBy(s => s.Faculty).OrderByDescending(g => g.Average(s => s.Grades.Average())).Select(g => g.Key).FirstOrDefault();
+        => _students.GroupBy(s => s.Faculty).OrderByDescending(g => g
+        .Average(s => s.Grades.Average())).Select(g => g.Key).FirstOrDefault();
     }
 }

@@ -4,8 +4,11 @@ namespace task02tests
 {
     public class StudentServiceTests
     {
+
+
         private readonly List<Student> _testStudents;
         private readonly StudentService _service;
+
 
         public StudentServiceTests()
         {
@@ -24,6 +27,7 @@ namespace task02tests
             var result = _service.GetStudentsByFaculty("ФИТ").ToList();
             Assert.Equal(2, result.Count);
             Assert.True(result.All(s => s.Faculty == "ФИТ"));
+
         }
 
         [Fact]
@@ -49,6 +53,8 @@ namespace task02tests
         {
             var result = _service.GroupStudentsByFaculty();
 
+
+
             Assert.Equal(2, result["ФИТ"].Count());
             Assert.Single(result["Экономика"]);
         }
@@ -59,6 +65,7 @@ namespace task02tests
             var result = _service.GetFacultyWithHighestAverageGrade();
             Assert.Equal("Экономика", result);
         }
+
 
     }
 }
