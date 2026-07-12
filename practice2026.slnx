@@ -1,1 +1,6 @@
-<Solution />
+<Solution>
+  <Project Path="CommandLib/CommandLib.csproj" Id="ef908ebe-4f94-4b54-b0d2-68dede643aa4" />
+  <Project Path="Plugin/Plugin.csproj" Id="86804419-2fbb-486b-aae4-9dfc51ba4b52" />
+  <Project Path="PluginApp/PluginApp.csproj" Id="3a422747-b97d-4be2-8a16-6667c70ff5ff" />
+  <Project Path="task10tests/task10tests.csproj" Id="d3b2ccaa-76d1-40b6-9e65-4b5e282bc782" />
+</Solution>
