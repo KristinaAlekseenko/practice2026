@@ -41,5 +41,3 @@ jobs:
           dotnet test *.slnx --no-build --configuration Release --verbosity normal
         else
           echo "No .slnx file found, skipping tests"
-        fi
-        
