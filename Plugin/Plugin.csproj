@@ -1,15 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>net10.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\CommandLIb\CommandLIb.csproj" />
-	</ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\CommandLib\CommandLib.csproj" />
+  </ItemGroup>
 	<Target Name="PostBuild" AfterTargets="Build">
 
 		<MakeDir Directories="$(SolutionDir)PluginApp\bin\$(Configuration)\net10.0\plugins\" Condition="!Exists('$(SolutionDir)PluginApp\bin\$(Configuration)\net10.0\plugins\')" />
