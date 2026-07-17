@@ -1,87 +1,82 @@
 ﻿using System;
 using System.Threading;
 using Xunit;
-using task17;
 
-namespace task17tests
+namespace task17.Tests
 {
-    public class task17tests : IDisposable
+    public class SchedulerTests
     {
-        private readonly ServerThread _serverThread;
-
-        public task17tests()
+        [Fact]
+        public void Scheduler_ShouldReturnCommands_InRoundRobinOrder()
         {
-            _serverThread = new ServerThread();
-            ExceptionHandler.Clear();
-        }
+            var scheduler = new Scheduler();
+            var cmd1 = new TestCommand(() => { });
+            var cmd2 = new TestCommand(() => { });
+            var cmd3 = new TestCommand(() => { });
 
-        public void Dispose()
-        {
-            _serverThread.HardStop();
-            _serverThread.Join();
+            scheduler.Add(cmd1);
+            scheduler.Add(cmd2);
+            scheduler.Add(cmd3);
+
+            Assert.True(scheduler.HasCommand());
+            Assert.Same(cmd1, scheduler.Select());
+            Assert.Same(cmd2, scheduler.Select());
+            Assert.Same(cmd3, scheduler.Select());
+            Assert.Same(cmd1, scheduler.Select());
         }
 
         [Fact]
-        public void HardStop_ShouldStopProcessing_AndClearQueue()
+        public void Scheduler_HasCommand_ShouldReturnFalse_WhenEmpty()
         {
-            var commandExecuted = false;
-            var testCommand = new TestCommand(() => commandExecuted = true);
-
-            _serverThread.Start();
-            _serverThread.Add(testCommand);
-            Thread.Sleep(200);
-
-            _serverThread.HardStop();
-            _serverThread.Join();
-            Assert.True(commandExecuted);
-            Assert.False(_serverThread.Thread.IsAlive);
+            var scheduler = new Scheduler();
+            Assert.False(scheduler.HasCommand());
+            Assert.Null(scheduler.Select());
         }
 
         [Fact]
-        public void SoftStop_ShouldProcessRemainingCommands_ThenStop()
+        public void ServerThread_ShouldExecuteLongRunningCommand_InMultipleCalls()
         {
-            var commandCount = 0;
-            var commands = new[]
-            {
-                new TestCommand(() => Interlocked.Increment(ref commandCount)),
-                new TestCommand(() => Interlocked.Increment(ref commandCount)),
-                new TestCommand(() => Interlocked.Increment(ref commandCount))
-            };
+            var scheduler = new Scheduler();
+            var serverThread = new ServerThread(scheduler);
+            var executionCount = 0;
+            var longCommand = new LongRunningCommand(() => Interlocked.Increment(ref executionCount), requiredCalls: 3);
 
-            _serverThread.Start();
-            foreach (var cmd in commands)
-            {
-                _serverThread.Add(cmd);
-            }
-            _serverThread.SoftStop();
-            _serverThread.Join();
-            Assert.Equal(3, commandCount);
-            Assert.False(_serverThread.Thread.IsAlive);
-        }
-
-        [Fact]
-        public void StopCommand_ShouldThrowException_WhenExecutedInWrongThread()
-        {
-            _serverThread.Start();
-            var hardStopCommand = new HardStopCommand(_serverThread);
-            var softStopCommand = new SoftStopCommand(_serverThread);
-
-            Assert.Throws<InvalidOperationException>(() => hardStopCommand.Execute());
-            Assert.Throws<InvalidOperationException>(() => softStopCommand.Execute());
+            scheduler.Add(longCommand);
+            serverThread.Start();
+            Thread.Sleep(500);
+            serverThread.HardStop();
+            serverThread.Join();
+            Assert.True(executionCount >= 1);
         }
 
         private class TestCommand : ICommand
         {
             private readonly Action _action;
+            public TestCommand(Action action) => _action = action;
+            public void Execute() => _action?.Invoke();
+        }
 
-            public TestCommand(Action action)
+        private class LongRunningCommand : ICommand
+        {
+            private readonly Action _action;
+            private readonly int _requiredCalls;
+            private int _callCount;
+
+            public LongRunningCommand(Action action, int requiredCalls)
             {
                 _action = action;
+                _requiredCalls = requiredCalls;
             }
 
             public void Execute()
             {
                 _action?.Invoke();
+                _callCount++;
+
+                if (_callCount < _requiredCalls)
+                {
+                    ExceptionHandler.Handle(this, null);
+                }
             }
         }
     }

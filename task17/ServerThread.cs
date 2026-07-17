@@ -1,42 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Collections.Concurrent;
 using System.Threading;
-using System.Runtime.ExceptionServices;
 
 namespace task17
 {
     public class ServerThread
     {
         private readonly BlockingCollection<ICommand> _taskQueue = new BlockingCollection<ICommand>();
+        private readonly IScheduler _scheduler;
         private readonly Thread _workerThread;
         private Action _currentAction;
         private volatile bool _shouldStop = false;
 
         public Thread Thread => _workerThread;
 
-        public ServerThread()
+        public ServerThread(IScheduler scheduler)
         {
+            _scheduler = scheduler ?? throw new ArgumentNullException(nameof(scheduler));
             _currentAction = DefaultBehavior;
             _workerThread = new Thread(Run);
-        }
-        public void Join()
-        {
-            _workerThread.Join();
-        }
-
-        private void Run()
-        {
-            while (!_shouldStop)
-            {
-                _currentAction();
-            }
-        }
-
-        public void Start()
-        {
-            _workerThread.Start();
         }
 
         public void Add(ICommand cmd)
@@ -61,11 +43,18 @@ namespace task17
             _taskQueue.CompleteAdding();
             UpdateBehavior(() =>
             {
+                if (_scheduler.HasCommand())
+                {
+                    ExecuteCommand(_scheduler.Select());
+                    return;
+                }
+
                 if (_taskQueue.TryTake(out ICommand cmd))
                 {
                     ExecuteCommand(cmd);
                     return;
                 }
+
                 HardStop();
             });
         }
@@ -74,6 +63,12 @@ namespace task17
         {
             try
             {
+                if (_scheduler.HasCommand())
+                {
+                    ExecuteCommand(_scheduler.Select());
+                    return;
+                }
+
                 if (_taskQueue.TryTake(out ICommand cmd, 100))
                 {
                     ExecuteCommand(cmd);
@@ -102,6 +97,22 @@ namespace task17
             _currentAction = nextBehavior ?? throw new ArgumentNullException(nameof(nextBehavior));
         }
 
-        
+        public void Join()
+        {
+            _workerThread.Join();
+        }
+
+        private void Run()
+        {
+            while (!_shouldStop)
+            {
+                _currentAction();
+            }
+        }
+
+        public void Start()
+        {
+            _workerThread.Start();
+        }
     }
 }
